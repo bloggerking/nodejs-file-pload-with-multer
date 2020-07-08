@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style type="text/css">
+      .error {
+        color: red;
+      }
+      .success {
+        color: green;
+      }
+      .warning {
+        color: goldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    {{#each flash}}
+      {{#each message}}
+        <h2 class="{{../type}}">{{this}}</h2>
+      {{/each}}
+    {{/each}}
+    {{{body}}}
+  </body>
+</html>
